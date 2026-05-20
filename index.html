@@ -893,24 +893,24 @@
         <div class="form-row">
           <div class="form-group">
             <label>Vorname</label>
-            <input type="text" placeholder="Max">
+            <input id="vorname" type="text" placeholder="Max">
           </div>
           <div class="form-group">
             <label>Nachname</label>
-            <input type="text" placeholder="Mustermann">
+            <input id="nachname" type="text" placeholder="Mustermann">
           </div>
         </div>
         <div class="form-group">
           <label>E-Mail</label>
-          <input type="email" placeholder="info@alphactr.ch">
+          <input id="email" type="email" placeholder="ihre@email.ch">
         </div>
         <div class="form-group">
           <label>Telefon</label>
-          <input type="tel" placeholder="+41 79 XXX XX XX">
+          <input id="telefon" type="tel" placeholder="+41 79 XXX XX XX">
         </div>
         <div class="form-group">
           <label>Ich interessiere mich für</label>
-          <select>
+          <select id="leistung">
             <option value="">Bitte auswählen...</option>
             <option>Buchhaltung</option>
             <option>Lohnabrechnung</option>
@@ -923,9 +923,9 @@
         </div>
         <div class="form-group">
           <label>Ihre Nachricht</label>
-          <textarea placeholder="Beschreiben Sie kurz Ihr Anliegen und Ihr Unternehmen..."></textarea>
+          <textarea id="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen und Ihr Unternehmen..."></textarea>
         </div>
-        <button class="btn-copper" style="width:100%; text-align:center; border:none; cursor:pointer;">
+        <button class="btn-copper" onclick="sendMail()" style="width:100%; text-align:center; border:none; cursor:pointer;">
           Anfrage absenden
         </button>
       </div>
@@ -1015,5 +1015,26 @@
   </div>
 </footer>
 
+<script>
+function sendMail() {
+  const vorname  = document.getElementById('vorname').value;
+  const nachname = document.getElementById('nachname').value;
+  const email    = document.getElementById('email').value;
+  const telefon  = document.getElementById('telefon').value;
+  const leistung = document.getElementById('leistung').value;
+  const nachricht= document.getElementById('nachricht').value;
+
+  const betreff = encodeURIComponent('Anfrage von ' + vorname + ' ' + nachname + ' – ' + leistung);
+  const body = encodeURIComponent(
+    'Name: ' + vorname + ' ' + nachname + '\n' +
+    'E-Mail: ' + email + '\n' +
+    'Telefon: ' + telefon + '\n' +
+    'Leistung: ' + leistung + '\n\n' +
+    'Nachricht:\n' + nachricht
+  );
+
+  window.location.href = 'mailto:info@alphactr.ch?subject=' + betreff + '&body=' + body;
+}
+</script>
 </body>
 </html>
