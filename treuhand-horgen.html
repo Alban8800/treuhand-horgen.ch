@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Treuhand Horgen | Buchhaltung, Steuerberatung & Unternehmensberatung am Zürichsee</title>
+  <meta name="description" content="Ihr Treuhandbüro in Horgen – professionelle Buchhaltung, Steuerberatung, Lohnabrechnung und Unternehmensberatung für KMU am linken Zürichseeufer. Persönlich, kompetent, lokal.">
+  <meta name="keywords" content="Treuhand Horgen, Buchhaltung Horgen, Steuerberatung Horgen, KMU Beratung Horgen, Lohnabrechnung Horgen, Unternehmensberatung Zürichsee, Treuhand Wädenswil, Buchhaltung Zürichsee, Treuhand Bezirk Horgen">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Treuhand Horgen">
+  <link rel="canonical" href="https://www.treuhand-horgen.ch/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Treuhand Horgen | Buchhaltung & Beratung am Zürichsee">
+  <meta property="og:description" content="Ihr lokaler Treuhandpartner in Horgen für Buchhaltung, Steuerberatung und KMU-Beratung am linken Zürichseeufer.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Treuhand Horgen",
+    "description": "Professionelle Buchhaltung, Steuerberatung und Unternehmensberatung für KMU in Horgen und am linken Zürichseeufer",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Seestrasse 10",
+      "addressLocality": "Horgen",
+      "postalCode": "8810",
+      "addressCountry": "CH"
+    },
+    "telephone": "+41 44 XXX XX XX",
+    "areaServed": ["Horgen", "Wädenswil", "Richterswil", "Thalwil", "Zürichsee"],
+    "serviceType": ["Buchhaltung", "Steuerberatung", "Lohnabrechnung", "Unternehmensberatung", "Digitalisierung"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #1c3028;
+      --forest-mid: #264a3a;
+      --sage: #4a7c6a;
+      --copper: #b87333;
+      --copper-light: #d4905a;
+      --cream: #f7f4ee;
+      --warm-white: #fdfaf5;
+      --text: #1e2a24;
+      --text-muted: #6b7a72;
+      --border: #ddd8cc;
+      --section-bg: #eeeae0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--warm-white);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(28, 48, 40, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(184, 115, 51, 0.3);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+      animation: slideDown 0.6s ease;
+    }
+
+    @keyframes slideDown { from { transform: translateY(-100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
+
+    .nav-logo {
+      display: flex; flex-direction: column;
+      text-decoration: none;
+    }
+    .nav-logo-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--warm-white);
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    .nav-logo-sub {
+      font-size: 0.65rem;
+      color: var(--copper);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--copper);
+      transform: scaleX(0); transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--copper-light); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      background: var(--copper) !important;
+      color: var(--warm-white) !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 2px;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--copper-light) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(150deg, var(--forest) 0%, var(--forest-mid) 50%, #1e4535 100%);
+      position: relative;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-organic {
+      position: absolute; inset: 0; pointer-events: none;
+    }
+    .hero-organic::before {
+      content: '';
+      position: absolute; top: -30%; right: -10%;
+      width: 70%; height: 120%;
+      background: radial-gradient(ellipse at center, rgba(184,115,51,0.06) 0%, transparent 65%);
+      transform: rotate(-15deg);
+    }
+    .hero-organic::after {
+      content: '';
+      position: absolute; bottom: -20%; left: -5%;
+      width: 50%; height: 80%;
+      background: radial-gradient(ellipse at center, rgba(74,124,106,0.08) 0%, transparent 60%);
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 4rem;
+      display: grid; grid-template-columns: 5fr 4fr; gap: 5rem; align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(184,115,51,0.15);
+      border: 1px solid rgba(184,115,51,0.3);
+      border-radius: 20px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.72rem;
+      color: var(--copper-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      color: var(--warm-white);
+      line-height: 1.08;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease 0.25s both;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--copper-light);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s ease 0.4s both;
+    }
+
+    .hero-btns {
+      display: flex; gap: 1rem;
+      animation: fadeUp 0.8s ease 0.55s both;
+    }
+
+    .btn-copper {
+      background: var(--copper);
+      color: var(--warm-white);
+      padding: 0.9rem 2.2rem;
+      border-radius: 2px;
+      font-size: 0.88rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s; display: inline-block;
+    }
+    .btn-copper:hover {
+      background: var(--copper-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(184,115,51,0.4);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      padding: 0.9rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 2px;
+      font-size: 0.88rem; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s; display: inline-block;
+    }
+    .btn-ghost:hover {
+      border-color: var(--copper);
+      color: var(--copper-light);
+      transform: translateY(-2px);
+    }
+
+    .hero-right-panel {
+      animation: fadeUp 0.8s ease 0.4s both;
+    }
+
+    .hero-service-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .hero-service-item {
+      display: flex; align-items: center; gap: 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(184,115,51,0.15);
+      border-radius: 4px;
+      padding: 1rem 1.3rem;
+      transition: all 0.25s;
+    }
+    .hero-service-item:hover {
+      background: rgba(184,115,51,0.1);
+      border-color: rgba(184,115,51,0.4);
+      transform: translateX(4px);
+    }
+    .hero-service-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .hero-service-text h4 {
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--warm-white);
+      margin-bottom: 0.15rem;
+    }
+    .hero-service-text p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .hero-service-arrow {
+      margin-left: auto;
+      color: var(--copper);
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--copper);
+      padding: 0.9rem 2rem;
+    }
+    .trust-strip-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .trust-strip-item {
+      display: flex; align-items: center; gap: 0.45rem;
+      font-size: 0.8rem;
+      color: var(--warm-white);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 5.5rem 2rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .label {
+      font-size: 0.68rem;
+      color: var(--copper);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      color: var(--forest);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+
+    .lead {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* ── LEISTUNGEN ── */
+    .leistungen { background: var(--cream); }
+
+    .leis-header {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      align-items: end; margin-bottom: 3.5rem;
+    }
+
+    .leis-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+
+    .leis-card {
+      background: var(--warm-white);
+      border-radius: 4px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+      border-left: 3px solid transparent;
+    }
+    .leis-card:hover {
+      border-left-color: var(--copper);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.07);
+      transform: translateY(-4px);
+    }
+
+    .leis-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: rgba(184,115,51,0.12);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .leis-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--forest);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .leis-card p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .leis-link {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--copper);
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .leis-link:hover { color: var(--forest); }
+
+    /* ── LOKAL SECTION ── */
+    .lokal-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+
+    .lokal-map {
+      background: linear-gradient(140deg, var(--forest) 0%, var(--forest-mid) 100%);
+      border-radius: 6px;
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .lokal-map::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(184,115,51,0.1) 0%, transparent 65%);
+    }
+    .lokal-map-text {
+      text-align: center; position: relative; z-index: 1; padding: 2rem;
+    }
+    .lokal-map-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--warm-white);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .lokal-map-text p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .region-tags {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem;
+    }
+    .region-tag {
+      background: rgba(184,115,51,0.12);
+      border: 1px solid rgba(184,115,51,0.25);
+      color: var(--copper-light);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .lokal-text h2 { margin-bottom: 1.2rem; }
+    .lokal-text p {
+      color: var(--text-muted); font-size: 0.95rem; line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .usp-list { list-style: none; margin-top: 1.5rem; }
+    .usp-list li {
+      display: flex; align-items: flex-start; gap: 0.8rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+    .usp-list li:last-child { border-bottom: none; }
+    .usp-list li::before {
+      content: '◆';
+      color: var(--copper);
+      font-size: 0.5rem;
+      margin-top: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    /* ── ZAHLEN ── */
+    .zahlen { background: var(--forest); }
+    .zahlen .title { color: var(--warm-white); }
+    .zahlen .lead { color: rgba(255,255,255,0.55); }
+    .zahlen .label { color: var(--copper); }
+
+    .zahlen-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px; overflow: hidden;
+      margin-top: 3rem;
+    }
+
+    .zahl-item {
+      background: rgba(28,48,40,0.8);
+      padding: 2.5rem 2rem; text-align: center;
+      transition: background 0.3s;
+    }
+    .zahl-item:hover { background: rgba(184,115,51,0.08); }
+    .zahl-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      color: var(--copper);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .zahl-item h4 {
+      font-size: 0.85rem;
+      color: var(--warm-white);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.04em;
+    }
+    .zahl-item p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+
+    /* ── KONTAKT ── */
+    .kontakt { background: var(--section-bg); }
+
+    .kontakt-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: start;
+    }
+
+    .kontakt-info h2 { margin-bottom: 1rem; }
+    .kontakt-info > p {
+      color: var(--text-muted); font-size: 0.95rem; line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .k-detail {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .k-icon {
+      width: 42px; height: 42px;
+      background: var(--forest);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .k-text strong {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--copper);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+    .k-text span {
+      font-size: 0.92rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .kontakt-form {
+      background: var(--warm-white);
+      padding: 2.8rem;
+      border-radius: 6px;
+      box-shadow: 0 6px 24px rgba(28,48,40,0.07);
+    }
+    .kontakt-form h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--forest);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .form-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      display: flex; flex-direction: column; gap: 0.3rem;
+      margin-bottom: 1.1rem;
+    }
+    .form-group label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--forest);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--copper);
+      background: var(--warm-white);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--forest);
+      padding: 3.5rem 2rem 1.5rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--warm-white);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .footer-brand p {
+      font-size: 0.82rem; line-height: 1.6; margin-top: 0.8rem; max-width: 250px;
+    }
+    .footer-col h4 {
+      font-size: 0.68rem; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--copper);
+      font-weight: 700; margin-bottom: 1rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.45rem; }
+    .footer-col a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none; font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--copper-light); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.76rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--copper); }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-main">Treuhand Horgen</span>
+    <span class="nav-logo-sub">Zürichsee · Seit 2025</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#lokal">Region</a></li>
+    <li><a href="#zahlen">Über uns</a></li>
+    <li><a href="#kontakt" class="nav-cta">Beratung anfragen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-organic"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-tag">📍 Treuhand · Horgen · Zürichsee</div>
+      <h1 class="hero-title">
+        Kompetente Beratung<br>
+        direkt in <em>Horgen</em>
+      </h1>
+      <p class="hero-sub">
+        Buchhaltung, Steuerberatung und Unternehmensberatung für KMU in Horgen und am linken Zürichseeufer — modern, digital und persönlich.
+      </p>
+      <div class="hero-btns">
+        <a href="#kontakt" class="btn-copper">Gratis Erstgespräch</a>
+        <a href="#leistungen" class="btn-ghost">Leistungen ansehen</a>
+      </div>
+    </div>
+    <div class="hero-right-panel">
+      <ul class="hero-service-list">
+        <li class="hero-service-item">
+          <span class="hero-service-icon">📒</span>
+          <div class="hero-service-text">
+            <h4>Buchhaltung Horgen</h4>
+            <p>Finanzbuchhaltung & Jahresabschluss für lokale KMU</p>
+          </div>
+          <span class="hero-service-arrow">→</span>
+        </li>
+        <li class="hero-service-item">
+          <span class="hero-service-icon">📑</span>
+          <div class="hero-service-text">
+            <h4>Steuerberatung</h4>
+            <p>Steuererklärung, -optimierung & -planung</p>
+          </div>
+          <span class="hero-service-arrow">→</span>
+        </li>
+        <li class="hero-service-item">
+          <span class="hero-service-icon">💰</span>
+          <div class="hero-service-text">
+            <h4>Lohnabrechnung</h4>
+            <p>Swissdec 5.0 konforme Lohnbuchhaltung</p>
+          </div>
+          <span class="hero-service-arrow">→</span>
+        </li>
+        <li class="hero-service-item">
+          <span class="hero-service-icon">💻</span>
+          <div class="hero-service-text">
+            <h4>Digitalisierung</h4>
+            <p>Papierlose Prozesse & KI-gestützte Automatisierung</p>
+          </div>
+          <span class="hero-service-arrow">→</span>
+        </li>
+        <li class="hero-service-item">
+          <span class="hero-service-icon">🚀</span>
+          <div class="hero-service-text">
+            <h4>Unternehmensberatung</h4>
+            <p>Wachstum, Prozesse & Neukundengewinnung</p>
+          </div>
+          <span class="hero-service-arrow">→</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-strip-item">✓ Lokal in Horgen</div>
+    <div class="trust-strip-item">✓ KMU-Spezialist</div>
+    <div class="trust-strip-item">✓ Swissdec 5.0</div>
+    <div class="trust-strip-item">✓ 100% digital möglich</div>
+    <div class="trust-strip-item">✓ Persönliche Betreuung</div>
+    <div class="trust-strip-item">✓ Erstgespräch kostenlos</div>
+  </div>
+</div>
+
+<!-- LEISTUNGEN -->
+<section class="section leistungen" id="leistungen">
+  <div class="section-inner">
+    <div class="leis-header">
+      <div>
+        <p class="label">Unsere Leistungen</p>
+        <h2 class="title">Treuhand&shy;leistungen in Horgen & am Zürichsee</h2>
+      </div>
+      <p class="lead">
+        Als Ihr Treuhandpartner in Horgen begleiten wir KMU im Bezirk Horgen in allen Finanz- und Beratungsfragen — von der Buchhaltung bis zur Digitalisierung.
+      </p>
+    </div>
+    <div class="leis-grid">
+      <div class="leis-card">
+        <div class="leis-num">01</div>
+        <h3>Buchhaltung Horgen</h3>
+        <p>Finanzbuchhaltung, Debitorenbuchhaltung, Kreditorenbuchhaltung und Jahresabschluss nach OR — zuverlässig für Ihr KMU in Horgen.</p>
+        <a href="#kontakt" class="leis-link">Anfragen →</a>
+      </div>
+      <div class="leis-card">
+        <div class="leis-num">02</div>
+        <h3>Lohnbuchhaltung & HR</h3>
+        <p>Lohnabrechnung, AHV/IV/EO, Swissdec 5.0 und digitale Lohnabrechnungen — vollständig konform mit der aktuellen Schweizer Gesetzgebung.</p>
+        <a href="#kontakt" class="leis-link">Anfragen →</a>
+      </div>
+      <div class="leis-card">
+        <div class="leis-num">03</div>
+        <h3>Steuerberatung</h3>
+        <p>Steuererklärung, Steueroptimierung und langfristige Steuerplanung für Unternehmen und Privatpersonen in Horgen und dem Bezirk Horgen.</p>
+        <a href="#kontakt" class="leis-link">Anfragen →</a>
+      </div>
+      <div class="leis-card">
+        <div class="leis-num">04</div>
+        <h3>Digitalisierung</h3>
+        <p>Papierlose Buchhaltung, automatisierte Prozesse und digitale Transformation für Ihr KMU — pragmatisch und auf Ihre Bedürfnisse zugeschnitten.</p>
+        <a href="#kontakt" class="leis-link">Anfragen →</a>
+      </div>
+      <div class="leis-card">
+        <div class="leis-num">05</div>
+        <h3>Unternehmensberatung</h3>
+        <p>Prozessoptimierung, Wachstumsstrategien und betriebswirtschaftliche Beratung für KMU am linken Zürichseeufer.</p>
+        <a href="#kontakt" class="leis-link">Anfragen →</a>
+      </div>
+      <div class="leis-card">
+        <div class="leis-num">06</div>
+        <h3>Neukundengewinnung</h3>
+        <p>Konkrete Strategien zur Kundenakquise: Positionierung, Angebotsgestaltung und Vertriebsaufbau für nachhaltiges Wachstum.</p>
+        <a href="#kontakt" class="leis-link">Anfragen →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOKAL -->
+<section class="section" id="lokal">
+  <div class="section-inner">
+    <div class="lokal-grid">
+      <div class="lokal-map">
+        <div class="lokal-map-text">
+          <h3>Linkes<br>Zürichseeufer</h3>
+          <p>Bezirk Horgen</p>
+          <div class="region-tags" style="justify-content:center;">
+            <span class="region-tag">Horgen</span>
+            <span class="region-tag">Wädenswil</span>
+            <span class="region-tag">Richterswil</span>
+            <span class="region-tag">Thalwil</span>
+            <span class="region-tag">Rüschlikon</span>
+            <span class="region-tag">Oberrieden</span>
+          </div>
+        </div>
+      </div>
+      <div class="lokal-text">
+        <p class="label">Lokal & regional</p>
+        <h2 class="title">Verwurzelt am linken Zürichseeufer</h2>
+        <p>
+          Der Bezirk Horgen ist eine der wirtschaftlich stärksten Regionen des Kantons Zürich — mit über 1'400 Arbeitgebern allein in Horgen, einem dichten Netz aus KMU und einer wachsenden Nachfrage nach professionellen Treuhandleistungen.
+        </p>
+        <p>
+          Wir kennen die lokalen Gegebenheiten, die Steuerämter und die Bedürfnisse der Unternehmen in dieser Region — das ist unser Vorteil gegenüber einer anonymen Grossfirma.
+        </p>
+        <ul class="usp-list">
+          <li>Persönliche Beratung vor Ort in Horgen</li>
+          <li>Kenntnis des kantonalen Steuerrechts Zürich</li>
+          <li>Vernetzt mit lokalen Unternehmen und Verbänden</li>
+          <li>Schnelle Erreichbarkeit — kein langer Anfahrtsweg</li>
+          <li>Betreuung der gesamten Seeregion</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAHLEN -->
+<section class="section zahlen" id="zahlen">
+  <div class="section-inner">
+    <p class="label">Über uns</p>
+    <h2 class="title">Unser Versprechen an Sie</h2>
+    <p class="lead">Konkrete Zahlen und klare Versprechen — so arbeiten wir.</p>
+    <div class="zahlen-grid">
+      <div class="zahl-item">
+        <div class="zahl-number">48h</div>
+        <h4>Reaktionszeit</h4>
+        <p>Wir melden uns innerhalb von 48 Stunden auf jede Anfrage.</p>
+      </div>
+      <div class="zahl-item">
+        <div class="zahl-number">100%</div>
+        <h4>Papierlos möglich</h4>
+        <p>Alle Prozesse können vollständig digital abgewickelt werden.</p>
+      </div>
+      <div class="zahl-item">
+        <div class="zahl-number">CHF 0</div>
+        <h4>Erstgespräch</h4>
+        <p>Kostenlose und unverbindliche Erstberatung für alle Neukunden.</p>
+      </div>
+      <div class="zahl-item">
+        <div class="zahl-number">1</div>
+        <h4>Ansprechpartner</h4>
+        <p>Immer dieselbe Person — keine Weitervermittlung, keine Warteschleifen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section kontakt" id="kontakt">
+  <div class="section-inner">
+    <div class="kontakt-grid">
+      <div class="kontakt-info">
+        <p class="label">Kontakt</p>
+        <h2 class="title">Kostenloses Erstgespräch in Horgen</h2>
+        <p>
+          Nehmen Sie Kontakt auf — wir freuen uns, Ihr Unternehmen kennenzulernen. Das Erstgespräch ist kostenlos und unverbindlich. In 30 Minuten zeigen wir Ihnen, wie wir Ihnen konkret helfen können.
+        </p>
+        <div class="k-detail">
+          <div class="k-icon">📍</div>
+          <div class="k-text">
+            <strong>Standort</strong>
+            <span>Seestrasse, 8810 Horgen</span>
+          </div>
+        </div>
+        <div class="k-detail">
+          <div class="k-icon">📞</div>
+          <div class="k-text">
+            <strong>Telefon</strong>
+            <span>+41 44 XXX XX XX</span>
+          </div>
+        </div>
+        <div class="k-detail">
+          <div class="k-icon">✉️</div>
+          <div class="k-text">
+            <strong>E-Mail</strong>
+            <span>info@treuhand-horgen.ch</span>
+          </div>
+        </div>
+        <div class="k-detail">
+          <div class="k-icon">🕐</div>
+          <div class="k-text">
+            <strong>Öffnungszeiten</strong>
+            <span>Mo–Fr: 08:00–18:00 Uhr</span>
+          </div>
+        </div>
+      </div>
+      <div class="kontakt-form">
+        <h3>Nachricht senden</h3>
+        <p class="form-note">Erstgespräch kostenlos & unverbindlich</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Vorname</label>
+            <input type="text" placeholder="Max">
+          </div>
+          <div class="form-group">
+            <label>Nachname</label>
+            <input type="text" placeholder="Mustermann">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>E-Mail</label>
+          <input type="email" placeholder="max@firma.ch">
+        </div>
+        <div class="form-group">
+          <label>Telefon</label>
+          <input type="tel" placeholder="+41 79 XXX XX XX">
+        </div>
+        <div class="form-group">
+          <label>Ich interessiere mich für</label>
+          <select>
+            <option value="">Bitte auswählen...</option>
+            <option>Buchhaltung</option>
+            <option>Lohnabrechnung</option>
+            <option>Steuerberatung</option>
+            <option>Digitalisierung</option>
+            <option>Unternehmensberatung</option>
+            <option>Neukundengewinnung</option>
+            <option>Mehrere Leistungen</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Ihre Nachricht</label>
+          <textarea placeholder="Beschreiben Sie kurz Ihr Anliegen und Ihr Unternehmen..."></textarea>
+        </div>
+        <button class="btn-copper" style="width:100%; text-align:center; border:none; cursor:pointer;">
+          Anfrage absenden
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Treuhand Horgen</h3>
+        <span style="font-size:0.68rem; color: var(--copper); letter-spacing:0.18em; text-transform:uppercase; font-weight:700;">Linkes Zürichseeufer</span>
+        <p>Ihr lokaler Partner für Buchhaltung, Steuerberatung und Unternehmensberatung im Bezirk Horgen.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#leistungen">Buchhaltung Horgen</a></li>
+          <li><a href="#leistungen">Steuerberatung</a></li>
+          <li><a href="#leistungen">Lohnabrechnung</a></li>
+          <li><a href="#leistungen">Digitalisierung</a></li>
+          <li><a href="#leistungen">Unternehmensberatung</a></li>
+          <li><a href="#leistungen">Neukundengewinnung</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Region</h4>
+        <ul>
+          <li><a href="#">Horgen</a></li>
+          <li><a href="#">Wädenswil</a></li>
+          <li><a href="#">Richterswil</a></li>
+          <li><a href="#">Thalwil</a></li>
+          <li><a href="#">Zürichsee</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="#">Seestrasse, 8810 Horgen</a></li>
+          <li><a href="#">+41 44 XXX XX XX</a></li>
+          <li><a href="#">info@treuhand-horgen.ch</a></li>
+          <li><a href="#kontakt">Gratis Erstberatung</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Treuhand Horgen — Buchhaltung & Unternehmensberatung am Zürichsee</span>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
